@@ -31,7 +31,7 @@ class Api::V1::ResumesController < ApplicationController
   private
 
   def resume_params
-    params.require(:resume).permit(:image_url, :industry, :user_id)
+    params.require(:resume).permit(:title, :image_url, :industry, :user_id)
   end
 
   def error_message
