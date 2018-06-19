@@ -1,5 +1,5 @@
 class Api::V1::ResumesController < ApplicationController
-  skip_forgery_protection
+  # protect_from_forgery except: [:index, :show, :create, :destroy]
   def index
     @resumes = Resume.all
 

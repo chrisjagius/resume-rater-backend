@@ -1,4 +1,5 @@
 class Api::V1::CommentsController < ApplicationController
+   # protect_from_forgery except: [:index, :create]
   def index
     @comments = Comment.all
     render json: @comments
