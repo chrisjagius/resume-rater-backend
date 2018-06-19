@@ -8,7 +8,7 @@
 
 sam = User.create(name: "Sam", email: "sam@nothing.com")
 bart = User.create(name: "Bartholomew", email: "bart@hotmail.com")
-donna = User.create(name: "Anna", email: "donna@hotmail.com")
+donna = User.create(name: "Donna", email: "donna@hotmail.com")
 sally = User.create(name: "Sally", email: "sally@hotmail.com")
 
 sam_general = Resume.create(title: "Sam's Gen", image_url: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Resume.pdf/page1-463px-Resume.pdf.jpg", industry: "general", user: sam)
