@@ -1,8 +1,11 @@
 class Api::V1::CommentsController < ApplicationController
    # protect_from_forgery except: [:index, :create]
   def index
-    @comments = Comment.all
-    render json: @comments
+    if params.include?(:resume_id)
+      @resume = Resume.find(params[:resume_id])
+      @comments = @resume.feedback
+      render json: @comments
+    end
   end
 
   def create
@@ -17,7 +20,7 @@ class Api::V1::CommentsController < ApplicationController
   private
 
   def comment_params
-    params.require(:comment).permit(:content, :poster_id)
+    params.require(:comment).permit(:content, :poster_id, :resume_id)
   end
 
   def error_message

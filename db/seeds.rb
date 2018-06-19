@@ -16,5 +16,5 @@ sam_tech = Resume.create(title: "Sam's Tech Res", image_url: "https://resume-tem
 donna_general = Resume.create(title: "Anna Final Resume", image_url: "https://resume-templates.me/wp-content/uploads/2018/05/9ec25cd11f67f2c64234e4a496096a73.gif", industry: "professional services", user: donna)
 
 bart_comment = Comment.create(resume: sam_general, poster: bart, content: "I'm a little teapot")
-sally_comment = Comment.create(resume: sam_tech, poster: sally, content: "Could use more...mojo")
+sally_comment = Comment.create(resume: sam_general, poster: sally, content: "Could use more...mojo")
 bart_comment2 = Comment.create(resume: donna_general, poster: bart, content: "Great Res!")
