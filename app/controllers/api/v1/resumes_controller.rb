@@ -1,5 +1,5 @@
 class Api::V1::ResumesController < ApplicationController
-
+  skip_forgery_protection
   def index
     @resumes = Resume.all
 
@@ -17,15 +17,25 @@ class Api::V1::ResumesController < ApplicationController
     if @resume.save
       render json: @resume
     else
-      throw alert
+      render json: error_message
     end
   end
 
+  def destroy
+    @resume = Resume.find(params[:id])
+    @user = User.find(@resume.user_id)
+    @resume.destroy
+    render json: @user
+  end
 
   private
 
   def resume_params
     params.require(:resume).permit(:image_url, :industry, :user_id)
+  end
+
+  def error_message
+    {status: "error", code: 400, message: "Bad Request Bro!"}
   end
 
 end
