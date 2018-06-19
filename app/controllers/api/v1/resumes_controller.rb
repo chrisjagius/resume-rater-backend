@@ -16,6 +16,8 @@ class Api::V1::ResumesController < ApplicationController
     @resume = Resume.new(resume_params)
     if @resume.save
       render json: @resume
+    else
+      throw alert
     end
   end
 
