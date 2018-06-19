@@ -1566,3 +1566,429 @@ Processing by Api::V1::CommentsController#index as HTML
 Completed 200 OK in 32ms (Views: 20.8ms | ActiveRecord: 7.7ms)
 
 
+Started GET "/api/v1/resumes/1/comments" for 127.0.0.1 at 2018-06-19 14:10:37 -0400
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/teasacura/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::CommentsController#index as HTML
+  Parameters: {"resume_id"=>"1"}
+  [1m[36mComment Load (1.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/api/v1/comments_controller.rb:4
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.39ms)
+Completed 200 OK in 59ms (Views: 37.7ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/api/v1/resumes/1" for 127.0.0.1 at 2018-06-19 14:10:41 -0400
+  
+ActionController::RoutingError (undefined local variable or method `skip_forgery_protection' for Api::V1::ResumesController:Class
+Did you mean?  skip_after_action):
+  
+app/controllers/api/v1/resumes_controller.rb:2:in `<class:ResumesController>'
+app/controllers/api/v1/resumes_controller.rb:1:in `<main>'
+Started GET "/api/v1/resumes/1" for 127.0.0.1 at 2018-06-19 14:14:25 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/teasacura/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (undefined method `protect_from_forgery' for Api::V1::ResumesController:Class):
+  
+app/controllers/api/v1/resumes_controller.rb:2:in `<class:ResumesController>'
+app/controllers/api/v1/resumes_controller.rb:1:in `<main>'
+Started GET "/api/v1/resumes/1" for 127.0.0.1 at 2018-06-19 14:15:27 -0400
+  
+ArgumentError (Before process_action callback :verify_authenticity_token has not been defined):
+  
+app/controllers/api/v1/resumes_controller.rb:2:in `<class:ResumesController>'
+app/controllers/api/v1/resumes_controller.rb:1:in `<main>'
+Started GET "/api/v1/resumes/1" for 127.0.0.1 at 2018-06-19 14:15:47 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/teasacura/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ArgumentError (Before process_action callback :verify_authenticity_token has not been defined):
+  
+app/controllers/api/v1/resumes_controller.rb:2:in `<class:ResumesController>'
+app/controllers/api/v1/resumes_controller.rb:1:in `<main>'
+Started GET "/api/v1/resumes/1" for 127.0.0.1 at 2018-06-19 14:18:26 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/teasacura/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (undefined method `protect_from_forgery' for Api::V1::ResumesController:Class):
+  
+app/controllers/api/v1/resumes_controller.rb:2:in `<class:ResumesController>'
+app/controllers/api/v1/resumes_controller.rb:1:in `<main>'
+Started GET "/api/v1/resumes/1" for 127.0.0.1 at 2018-06-19 14:23:08 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/teasacura/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (undefined method `protect_from_forgery' for Api::V1::ResumesController:Class):
+  
+app/controllers/api/v1/resumes_controller.rb:2:in `<class:ResumesController>'
+app/controllers/api/v1/resumes_controller.rb:1:in `<main>'
+Started GET "/api/v1/resumes/1" for 127.0.0.1 at 2018-06-19 14:23:12 -0400
+  
+ActionController::RoutingError (undefined method `protect_from_forgery' for Api::V1::ResumesController:Class):
+  
+app/controllers/api/v1/resumes_controller.rb:2:in `<class:ResumesController>'
+app/controllers/api/v1/resumes_controller.rb:1:in `<main>'
+Started GET "/api/v1/resumes/1" for 127.0.0.1 at 2018-06-19 14:23:30 -0400
+Processing by Api::V1::ResumesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResume Load (0.6ms)[0m  [1m[34mSELECT  "resumes".* FROM "resumes" WHERE "resumes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/resumes_controller.rb:10
+[active_model_serializers] Rendered ResumeSerializer with ActiveModelSerializers::Adapter::Attributes (0.38ms)
+Completed 200 OK in 77ms (Views: 20.9ms | ActiveRecord: 12.6ms)
+
+
+Started GET "/api/v1/resumes/1" for 127.0.0.1 at 2018-06-19 14:23:46 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/teasacura/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::ResumesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mResume Load (0.6ms)[0m  [1m[34mSELECT  "resumes".* FROM "resumes" WHERE "resumes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/resumes_controller.rb:10
+[active_model_serializers] Rendered ResumeSerializer with ActiveModelSerializers::Adapter::Attributes (0.31ms)
+Completed 200 OK in 40ms (Views: 10.0ms | ActiveRecord: 10.1ms)
+
+
+Started GET "/api/v1/resumes/1/comments" for 127.0.0.1 at 2018-06-19 14:23:55 -0400
+Processing by Api::V1::CommentsController#index as HTML
+  Parameters: {"resume_id"=>"1"}
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/api/v1/comments_controller.rb:5
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.32ms)
+Completed 200 OK in 28ms (Views: 12.1ms | ActiveRecord: 12.4ms)
+
+
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (263.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "resumerater_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (278.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "resumerater_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (541.1ms)[0m  [1m[35mCREATE DATABASE "resumerater_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (583.3ms)[0m  [1m[35mCREATE DATABASE "resumerater_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (1.0ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.5ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (17.5ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "resume_id" integer, "poster_id" integer, "content" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "resumes" CASCADE[0m
+  ↳ db/schema.rb:26
+  [1m[35m (22.4ms)[0m  [1m[35mCREATE TABLE "resumes" ("id" bigserial primary key, "image_url" character varying, "industry" character varying, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:26
+  [1m[35m (1.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:34
+  [1m[35m (15.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:34
+  [1m[35m (9.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180618190515)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180618190316),
+(20180618185916);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-06-19 19:11:58.899315"], ["updated_at", "2018-06-19 19:11:58.899315"]]
+  ↳ db/schema.rb:13
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (2.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (17.3ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "resume_id" integer, "poster_id" integer, "content" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "resumes" CASCADE[0m
+  ↳ db/schema.rb:26
+  [1m[35m (11.8ms)[0m  [1m[35mCREATE TABLE "resumes" ("id" bigserial primary key, "image_url" character varying, "industry" character varying, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:26
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:34
+  [1m[35m (12.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:34
+  [1m[35m (14.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180618190515)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180618190316),
+(20180618185916);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (9.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-06-19 19:11:59.074194"], ["updated_at", "2018-06-19 19:11:59.074194"]]
+  ↳ db/schema.rb:13
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.6ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2018-06-19 19:11:59.083302"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7883910771243559185)[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to AddTitleToResumes (20180619180500)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "resumes" ADD "title" character varying[0m
+  ↳ db/migrate/20180619180500_add_title_to_resumes.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180619180500"]]
+  ↳ bin/rails:9
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7883910771243559185)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Sam"], ["email", "sam@nothing.com"], ["created_at", "2018-06-19 19:12:11.333578"], ["updated_at", "2018-06-19 19:12:11.333578"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Bartholomew"], ["email", "bart@hotmail.com"], ["created_at", "2018-06-19 19:12:11.342573"], ["updated_at", "2018-06-19 19:12:11.342573"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Anna"], ["email", "donna@hotmail.com"], ["created_at", "2018-06-19 19:12:11.347216"], ["updated_at", "2018-06-19 19:12:11.347216"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Sally"], ["email", "sally@hotmail.com"], ["created_at", "2018-06-19 19:12:11.351057"], ["updated_at", "2018-06-19 19:12:11.351057"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mResume Create (0.9ms)[0m  [1m[32mINSERT INTO "resumes" ("image_url", "industry", "user_id", "created_at", "updated_at", "title") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["image_url", "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Resume.pdf/page1-463px-Resume.pdf.jpg"], ["industry", "general"], ["user_id", 1], ["created_at", "2018-06-19 19:12:11.383102"], ["updated_at", "2018-06-19 19:12:11.383102"], ["title", "Sam's Gen"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (228.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "resumerater_development"[0m
+  ↳ bin/rails:9
+  [1m[35m (215.3ms)[0m  [1m[35mDROP DATABASE IF EXISTS "resumerater_test"[0m
+  ↳ bin/rails:9
+  [1m[35m (461.5ms)[0m  [1m[35mCREATE DATABASE "resumerater_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35m (614.7ms)[0m  [1m[35mCREATE DATABASE "resumerater_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (13.2ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "resume_id" integer, "poster_id" integer, "content" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "resumes" CASCADE[0m
+  ↳ db/schema.rb:26
+  [1m[35m (11.0ms)[0m  [1m[35mCREATE TABLE "resumes" ("id" bigserial primary key, "image_url" character varying, "industry" character varying, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "title" character varying)[0m
+  ↳ db/schema.rb:26
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:35
+  [1m[35m (21.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:35
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180619180500)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180618190316),
+(20180618190515),
+(20180618185916);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-06-19 19:12:41.465187"], ["updated_at", "2018-06-19 19:12:41.465187"]]
+  ↳ db/schema.rb:13
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35mSQL (0.6ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (11.8ms)[0m  [1m[35mCREATE TABLE "comments" ("id" bigserial primary key, "resume_id" integer, "poster_id" integer, "content" text, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "resumes" CASCADE[0m
+  ↳ db/schema.rb:26
+  [1m[35m (10.9ms)[0m  [1m[35mCREATE TABLE "resumes" ("id" bigserial primary key, "image_url" character varying, "industry" character varying, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "title" character varying)[0m
+  ↳ db/schema.rb:26
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:35
+  [1m[35m (13.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "email" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:35
+  [1m[35m (10.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20180619180500)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180618190316),
+(20180618190515),
+(20180618185916);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (10.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-06-19 19:12:41.604992"], ["updated_at", "2018-06-19 19:12:41.604992"]]
+  ↳ db/schema.rb:13
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Update (0.5ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2018-06-19 19:12:41.612493"], ["key", "environment"]]
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:9
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:9
+  [1m[36mUser Create (1.0ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Sam"], ["email", "sam@nothing.com"], ["created_at", "2018-06-19 19:12:41.675184"], ["updated_at", "2018-06-19 19:12:41.675184"]]
+  ↳ db/seeds.rb:9
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:10
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Bartholomew"], ["email", "bart@hotmail.com"], ["created_at", "2018-06-19 19:12:41.680317"], ["updated_at", "2018-06-19 19:12:41.680317"]]
+  ↳ db/seeds.rb:10
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:10
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:11
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Anna"], ["email", "donna@hotmail.com"], ["created_at", "2018-06-19 19:12:41.684456"], ["updated_at", "2018-06-19 19:12:41.684456"]]
+  ↳ db/seeds.rb:11
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:11
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:12
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Sally"], ["email", "sally@hotmail.com"], ["created_at", "2018-06-19 19:12:41.688328"], ["updated_at", "2018-06-19 19:12:41.688328"]]
+  ↳ db/seeds.rb:12
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:12
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:14
+  [1m[36mResume Create (0.8ms)[0m  [1m[32mINSERT INTO "resumes" ("image_url", "industry", "user_id", "created_at", "updated_at", "title") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["image_url", "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Resume.pdf/page1-463px-Resume.pdf.jpg"], ["industry", "general"], ["user_id", 1], ["created_at", "2018-06-19 19:12:41.709618"], ["updated_at", "2018-06-19 19:12:41.709618"], ["title", "Sam's Gen"]]
+  ↳ db/seeds.rb:14
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:14
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:16
+  [1m[36mResume Create (0.4ms)[0m  [1m[32mINSERT INTO "resumes" ("image_url", "industry", "user_id", "created_at", "updated_at", "title") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["image_url", "https://resume-templates.me/wp-content/uploads/2018/05/9ec25cd11f67f2c64234e4a496096a73.gif"], ["industry", "professional services"], ["user_id", 3], ["created_at", "2018-06-19 19:12:41.717581"], ["updated_at", "2018-06-19 19:12:41.717581"], ["title", "Anna Final Resume"]]
+  ↳ db/seeds.rb:16
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:16
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:18
+  [1m[36mComment Create (0.9ms)[0m  [1m[32mINSERT INTO "comments" ("resume_id", "poster_id", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["resume_id", 1], ["poster_id", 2], ["content", "I'm a little teapot"], ["created_at", "2018-06-19 19:12:41.745820"], ["updated_at", "2018-06-19 19:12:41.745820"]]
+  ↳ db/seeds.rb:18
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:18
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mComment Create (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("poster_id", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["poster_id", 4], ["content", "Could use more...mojo"], ["created_at", "2018-06-19 19:12:41.750709"], ["updated_at", "2018-06-19 19:12:41.750709"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:20
+  [1m[36mComment Create (0.6ms)[0m  [1m[32mINSERT INTO "comments" ("resume_id", "poster_id", "content", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["resume_id", 2], ["poster_id", 2], ["content", "Great Res!"], ["created_at", "2018-06-19 19:12:41.754885"], ["updated_at", "2018-06-19 19:12:41.754885"]]
+  ↳ db/seeds.rb:20
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:20

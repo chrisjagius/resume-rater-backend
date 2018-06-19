@@ -1,5 +1,5 @@
 class Api::V1::UsersController < ApplicationController
-  skip_forgery_protection
+  # protect_from_forgery except: [:show, :create]
   def show
     @user = User.find(params[:id])
 
