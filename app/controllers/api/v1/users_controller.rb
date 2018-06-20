@@ -16,6 +16,12 @@ class Api::V1::UsersController < ApplicationController
 
   end
 
+  def login
+    @user = User.find_by(email: params[:email])
+
+    render json: @user
+  end
+
   private
 
   def user_params
