@@ -3111,3 +3111,115 @@ Processing by Api::V1::ResumesController#index as */*
 Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/api/v1/resumes" for 127.0.0.1 at 2018-06-19 16:31:37 -0400
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/teasacura/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::ResumesController#index as */*
+  [1m[36mResume Load (0.7ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes"[0m
+  ↳ app/controllers/api/v1/resumes_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.89ms)
+Completed 200 OK in 63ms (Views: 30.2ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/api/v1/resumes" for 127.0.0.1 at 2018-06-19 16:34:20 -0400
+Processing by Api::V1::ResumesController#index as */*
+  [1m[36mResume Load (1.1ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes"[0m
+  ↳ app/controllers/api/v1/resumes_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.55ms)
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/api/v1/resumes" for 127.0.0.1 at 2018-06-19 16:35:21 -0400
+Processing by Api::V1::ResumesController#index as */*
+  [1m[36mResume Load (9.9ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes"[0m
+  ↳ app/controllers/api/v1/resumes_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.65ms)
+Completed 200 OK in 13ms (Views: 3.1ms | ActiveRecord: 9.9ms)
+
+
+Started GET "/api/v1/resumes" for 127.0.0.1 at 2018-06-19 16:35:38 -0400
+Processing by Api::V1::ResumesController#index as */*
+  [1m[36mResume Load (0.4ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes"[0m
+  ↳ app/controllers/api/v1/resumes_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.52ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/api/v1/resumes" for 127.0.0.1 at 2018-06-19 16:35:48 -0400
+Processing by Api::V1::ResumesController#index as */*
+  [1m[36mResume Load (1.8ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes"[0m
+  ↳ app/controllers/api/v1/resumes_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.73ms)
+Completed 200 OK in 6ms (Views: 3.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/api/v1/resumes" for 127.0.0.1 at 2018-06-19 16:35:56 -0400
+Processing by Api::V1::ResumesController#index as */*
+  [1m[36mResume Load (11.8ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes"[0m
+  ↳ app/controllers/api/v1/resumes_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.72ms)
+Completed 200 OK in 15ms (Views: 3.2ms | ActiveRecord: 11.8ms)
+
+
+Started GET "/api/v1/resumes" for 127.0.0.1 at 2018-06-19 16:37:29 -0400
+Processing by Api::V1::ResumesController#index as */*
+  [1m[36mResume Load (5.0ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes"[0m
+  ↳ app/controllers/api/v1/resumes_controller.rb:6
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.68ms)
+Completed 200 OK in 8ms (Views: 3.2ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2018-06-19 16:37:35 -0400
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"name"=>"Alex", "email"=>"alex@hotmail.com", "user"=>{"name"=>"Alex", "email"=>"alex@hotmail.com"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:11
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Alex"], ["email", "alex@hotmail.com"], ["created_at", "2018-06-19 20:37:35.257871"], ["updated_at", "2018-06-19 20:37:35.257871"]]
+  ↳ app/controllers/api/v1/users_controller.rb:11
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:11
+[active_model_serializers]   [1m[36mResume Load (0.4ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" WHERE "resumes"."user_id" = $1[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/serializers/user_serializer.rb:5
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (21.08ms)
+Completed 200 OK in 46ms (Views: 24.6ms | ActiveRecord: 15.0ms)
+
+
+Started GET "/api/v1/users/5" for 127.0.0.1 at 2018-06-19 16:38:00 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4
+[active_model_serializers]   [1m[36mResume Load (0.4ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" WHERE "resumes"."user_id" = $1[0m  [["user_id", 5]]
+[active_model_serializers]   ↳ app/serializers/user_serializer.rb:5
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (1.56ms)
+Completed 200 OK in 7ms (Views: 1.8ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/api/v1/users" for 127.0.0.1 at 2018-06-19 17:23:03 -0400
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/teasacura/.rvm/gems/ruby-2.3.3/gems/activerecord-5.2.0/lib/active_record/log_subscriber.rb:98
+Processing by Api::V1::UsersController#create as */*
+  Parameters: {"user"=>{"name"=>"Beth", "email"=>"bethany@hotmail.com"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/v1/users_controller.rb:11
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Beth"], ["email", "bethany@hotmail.com"], ["created_at", "2018-06-19 21:23:04.006566"], ["updated_at", "2018-06-19 21:23:04.006566"]]
+  ↳ app/controllers/api/v1/users_controller.rb:11
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/api/v1/users_controller.rb:11
+[active_model_serializers]   [1m[36mResume Load (0.5ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" WHERE "resumes"."user_id" = $1[0m  [["user_id", 6]]
+[active_model_serializers]   ↳ app/serializers/user_serializer.rb:5
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (35.42ms)
+Completed 200 OK in 87ms (Views: 53.7ms | ActiveRecord: 21.4ms)
+
+
+Started GET "/api/v1/users/6" for 127.0.0.1 at 2018-06-19 17:23:13 -0400
+Processing by Api::V1::UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:4
+[active_model_serializers]   [1m[36mResume Load (0.5ms)[0m  [1m[34mSELECT "resumes".* FROM "resumes" WHERE "resumes"."user_id" = $1[0m  [["user_id", 6]]
+[active_model_serializers]   ↳ app/serializers/user_serializer.rb:5
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (2.33ms)
+Completed 200 OK in 9ms (Views: 2.4ms | ActiveRecord: 1.5ms)
+
+
