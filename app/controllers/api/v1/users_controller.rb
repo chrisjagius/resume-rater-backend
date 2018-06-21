@@ -18,8 +18,12 @@ class Api::V1::UsersController < ApplicationController
 
   def login
     @user = User.find_by(email: params[:email])
+    if !@user.nil?
+      render json: @user
+    else
+      render json: error_message
+    end
 
-    render json: @user
   end
 
   private
